@@ -81,7 +81,7 @@ static int isValidAffiliation(const char *pcAnswer)
       "AAS", "AFS", "AMS", "ANT", "AOS", "APC", "ARA", "ARC", "ART",
       "ASA", "AST", "ATL", "BCS", "CBE", "CEE", "CGS", "CHI", "CHM",
       "CHV", "CLA", "CLG", "COM", "COS", "CTL", "CWR", "CZE", "DAN",
-      "EAS", "ECO", "ECS", "EEB", "EGR", "ELE", "ENE", "ENG", "ENT",
+      "EAS", "ECE", "ECO", "ECS", "EEB", "EGR", "ENE", "ENG", "ENT",
       "ENV", "EPS", "FIN", "FRE", "FRS", "GEO", "GER", "GHP", "GLS",
       "GSS", "HEB", "HIN", "HIS", "HLS", "HOS", "HPD", "HUM", "ISC",
       "ITA", "JDS", "JPN", "JRN", "KOR", "LAO", "LAS", "LAT", "LCA",
