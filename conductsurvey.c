@@ -212,7 +212,7 @@ static void handleQuestion(const char *pcQuestion,
 
 int main(int argc, char *argv[])
 {
-   enum {QUESTION_COUNT = 34};
+   enum {QUESTION_COUNT = 36};
 
    FILE *psSurveyFile;
 
@@ -248,14 +248,15 @@ int main(int argc, char *argv[])
    printf("\n");
 
    handleQuestion(
-      "What is your concentration (or program, affiliation, etc.)?"
-      "(COS, MAT, PHI, URB, ..., undeclared, other, N/A)?",
+      "What is your concentration (or program, affiliation, etc.)?\n"
+      "    [COS, MAT, PHI, URB, ..., undeclared, other, N/A]? ",
       isValidAffiliation, psSurveyFile);
 
    printf("\n");
 
    handleQuestion(
-      "What degree are you pursuing (AB, BSE, grad, HS, N/A)?",
+      "What degree are you pursuing?\n"
+      "    [AB, BSE, grad, HS, N/A]?",
       isValidDegree, psSurveyFile);
 
    printf("\n");
@@ -265,10 +266,22 @@ int main(int argc, char *argv[])
       isValidYear, psSurveyFile);
 
    printf("\n");
+   handleQuestion(
+      "How did you satisfy the prerequisite for this class?\n"
+      "    [0: took COS 126, 1: took ECE 115, "
+      "2: COS placement exam, 3: special permission / other]",
+      isValidRating, psSurveyFile);
+
+   printf("\n");
+   handleQuestion(
+      "Have you already taken COS 226? [0: no, 1: yes]",
+      isValidRating, psSurveyFile);
+
+   printf("\n");
 
    printf("State your expertise in each topic. Use a 5-point scale\n");
    printf("where 5 means \"I know this topic very well\" and 0\n");
-   printf("means \"I know nothing about this topic\". Please enter");
+   printf("means \"I know nothing about this topic\". Please enter\n");
    printf("only integers (no decimal points).\n");
 
    printf("\n");
@@ -282,7 +295,7 @@ int main(int argc, char *argv[])
       "Hexadecimal number system (0-5)?",
       isValidRating, psSurveyFile);
    handleQuestion(
-      "Representation of signed integers (two's comp notation) (0-5)?",
+      "Representation of signed integers (e.g., 2's complement) (0-5)?",
      isValidRating, psSurveyFile);
 
    printf("\n");
